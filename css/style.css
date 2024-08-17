@@ -1,0 +1,752 @@
+
+.body,html{
+    margin: 0;
+    padding: 0;
+  }
+  .h1, h2,h3,h4,h5,h6{
+    margin: 0;
+    padding: 0;
+  }
+  .ul{
+    margin: 0;
+    padding: 0;
+  }
+  .ul li{
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+  }
+  .a{
+    text-decoration: none;
+  } 
+  ::-webkit-scrollbar{
+    width: 0;
+  }
+  /* ----Scroll bar------ */
+  #scrrollPath{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+    height: 100%;
+    animation: animate 5s linear infinite;
+  }
+  @keyframes animated {
+    0%,100%{
+      filter: hue-rotate(0deg);
+      box-shadow: 0 0 10px #00ffd0, 
+       #ff00c3,
+      #77ff00,
+       #ff4000,
+       #00ffe7 ;
+    }
+    50%{
+      filter: hue-rotate(360deg);
+    }
+    
+  }
+  #progressbar{
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 10px;
+  }
+  #progressbar:before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    fill: blur(1pc);
+    
+  }
+  #progressbar:after{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: blur(5px);
+    background: linear-gradient(to top,#0040ff, #00d9ff,#00ff33, #ffea00,#ff0000);
+    fill: blur(90pc);
+  }
+ /* ------NAV BAR 1------   */
+
+.left_bar a{
+  text-decoration: none;
+  padding: 0 0 0 20px;
+  color: white;
+}
+.left_bar i{
+  color:white;
+}
+/* -----slider------ */
+.carousel-inner img{
+  height: 700px;
+  width: 100%;
+}
+/* .nav-link{
+  color: white;
+} */
+/* .element{
+  position: absolute;
+  width: 100%;
+  z-index: 44445;
+  background-color: rgba(0, 0, 0, .5) !important;
+} */
+.carousel-caption h5{
+  line-height: 0;
+  padding-bottom: 3pc;
+  font-size: 90px;
+}
+.carousel-caption p{
+  padding-bottom: 2pc;
+  font-size: 30px;
+}
+.carousel-caption {
+  right: 10%;
+  left: 9%;
+}
+/* --------slider button------- */
+.glow-on-hover {
+    width: 200px;
+    height: 50px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: #111;
+    cursor: pointer;
+    position: relative;
+    z-index: 0;
+    border-radius: 10px;
+    margin-bottom: 5pc;
+}
+
+.glow-on-hover:before {
+    content: '';
+    background: linear-gradient(45deg, #ff0000, #ff7300, #fffb00, #48ff00, #00ffd5, #002bff, #7a00ff, #ff00c8, #ff0000);
+    position: absolute;
+    top: -2px;
+    left:-2px;
+    background-size: 400%;
+    z-index: -1;
+    filter: blur(5px);
+    width: calc(100% + 4px);
+    height: calc(100% + 4px);
+    animation: glowing 20s linear infinite;
+    opacity: 0;
+    transition: opacity .3s ease-in-out;
+    border-radius: 10px;
+}
+
+.glow-on-hover:active {
+    color: #000;
+}
+
+.glow-on-hover:active:after {
+    background: transparent;
+}
+
+.glow-on-hover:hover:before {
+    opacity:1;
+}
+
+.glow-on-hover:after {
+    z-index: -1;
+    content: '';
+    position: absolute;
+    width: 200px;
+    height: 50px;
+    background: #111;
+    left: 0;
+    top: 0;
+    border-radius: 10px;
+}
+
+@keyframes glowing {
+    0% { background-position: 0 0; }
+    50% { background-position: 400% 0; }
+    100% { background-position: 0 0; }
+}
+/* ----------i am photographer and videographer section------------- */
+.iam_img img{
+  box-shadow: -0px -0px 10px 0px white;
+  height: 450px;
+  border-radius:30px;
+}
+.iam_img{
+  margin-top: 60px;
+  float: right;
+}
+.text h1{
+  color: red;
+  padding-top: 10px;
+  font-size: 60px;
+}
+.text h6{
+  margin: 2px 0 0 20px;
+  font-size: 20px;
+}
+.text{
+  color:white;
+  margin-left: 50px;
+}
+.tick{
+  color: red;
+  padding-right: 10px;
+}
+.colr_red a:hover{
+  color: red;
+}
+/* -----------animation on img------------- */
+/* .autoshow_2{
+  animation:autoshowanimation_2 ;
+  animation-timeline: view();
+}
+@keyframes autoshowanimation_2 {
+  from{
+    opacity: 0;
+    transform: translateX(0px) scale(1.3);
+  }to{
+    opacity:1;
+    transform: translateX(60px) scale(1);
+  }
+} */
+/* -----------animation on heading------------- */
+/* .autoshow{
+  animation:autoshowanimation ;
+  animation-timeline: view();
+}
+@keyframes autoshowanimation {
+  from{
+    opacity: 0;
+    transform: translateX(-0px) scale(0.3);
+  }to{
+    opacity:9;
+    transform: translateX(60px) scale(1);
+  }
+} */
+/* -----------animation on peragraph------------- */
+/* .autoshow_1{
+  animation:autoshowanimation_1 ;
+  animation-timeline: view();
+}
+@keyframes autoshowanimation_1 {
+  from{
+    opacity: 0;
+    transform: translateX(-0px) scale(1);
+  }to{
+    opacity:1;
+    transform: translateX(60px) scale(1);
+  }
+} */
+/* -----------animation on points------------- */
+/* .autoshow_3{
+  animation:autoshowanimation_3 ;
+  animation-timeline: view();
+}
+@keyframes autoshowanimation_3 {
+  from{
+    opacity: 1;
+    transform: translateX(-0px) scale(0.8);
+  }to{
+    opacity:1;
+    transform: translateX(60px) scale(1);
+  }
+} */
+
+video {
+  margin-left: 390px;
+  z-index: -100;
+  transform: translateX(-50%);
+}
+
+/*---------------- Our Latest Project----------------- */
+.our_experties{
+  color: white;
+  margin-top: 60px;
+  text-align: center;
+}
+.our_experties h1{
+  font-size: 60px;
+  color: red;
+}
+.event_video{
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+}
+.event_video img{
+  box-shadow: -0px -0px 7px 0px white;
+}
+.event_video p{
+  color: gray;
+}
+.event_{
+margin-top:10px;
+}
+/* -----------animation on image 1----------- */
+.rigth_animation{
+  animation: animation_on_event;
+  animation-timeline: view();
+}
+@keyframes animation_on_event {
+  0%{
+    translate:-100px;
+    opacity:0;
+  }
+  50%{
+    translate:0px;
+    opacity: 1;
+  }
+100%{
+  translate: 0;
+  opacity: 9;
+}
+}
+.left_animation{
+  animation: animation_on_adevertise;
+  animation-timeline: view();
+}
+@keyframes animation_on_adevertise { 
+  0%{
+    translate:100px;
+    opacity:0;
+  }
+  50%{
+    translate:10px;
+    opacity: 1;
+  }
+100%{
+  translate: 0;
+  opacity: 9;
+}
+}
+.up_animation{
+  animation: photographer;
+  animation-timeline: view();
+}
+@keyframes photographer {
+  from{
+    opacity:0;
+    transform: translateX() scale(1);
+  }to{
+    opacity:100;
+    transform: translateX() scale(1);
+  }
+}
+/*---------------- bounsing_ball_animation-------------- */
+/* .bounsingball{
+  position: relative;
+}
+.bounsingball img{
+  position: absolute;
+  left: -150px;
+  animation:bouncing_ball 3s linear ;
+
+}
+@keyframes bouncing_ball {
+  0%{
+    top: 50px;
+    left:0px;
+    animation-timing-function:linear;
+  }
+  10%{
+    top:100px;
+    left: 20px;
+    animation-timing-function: linear;
+  }
+  20%{
+    top: 200px;
+    left: 100px;
+    animation-timing-function: linear;
+  }
+  30%{
+    top: 300px;
+    left: 150px;
+    animation-timing-function: linear;
+  }
+  40%{
+    top:400px ;
+    left:200px ;
+    animation-timing-function:linear;
+  }
+  50%{
+    top:250px ;
+    right:250px;
+    animation-timing-function:linear;
+  }
+  60%{
+    top:250px ;
+    left:300px;
+    animation-timing-function:linear;
+  }
+  70%{
+    top:660px ;
+    left:880px;
+    animation-timing-function:linear;
+  }
+  80%{
+    top:800px;
+    left: 900px;
+    animation-timing-function:linear;
+  }
+} */
+/* -----------our services----------- */
+.box1 h1,p{
+  padding-top: 20px;
+  padding-left: 20px;
+}
+.box1 img{
+  position: relative;
+  border-radius: 50%; 
+  background-size: cover;
+  height: 200px;
+  width: 200px;
+  box-shadow: -0 -0 5px 5px gray;
+}
+.hover_box{
+  margin-left: 90px;
+  margin-top:60px;
+  height: 450px;
+  clip-path:circle(60% at 0 0);
+  transition: all 1.5s ease;
+  border-radius: 100px 0px 25px 25px;
+  background-color: transparent;
+}
+.hover_box:hover{
+  background-color:rgb(90, 230, 230);
+  margin-top:60px;
+  height: 450px;
+  border-radius: 100px 0px 25px 25px;
+  clip-path:circle(100%) ;
+}
+
+/*-------------scroll auto play video-----------------*/
+
+/* .scroll-spacer {
+  align-items: center;
+  background-color: #1a1a1a;
+  border-radius: 30px;
+  display: flex;
+  justify-content: center;
+  height: 75vh;
+  margin: 1em auto;
+  width: 90%;
+} */
+/* video {
+  display: block;
+  height: auto;
+  margin: auto;
+  position: relative;
+  width: 100%;
+} */
+.video-wrap {
+  margin: 0 auto;
+  position: relative;
+  width: 90%;
+}
+/* .video-wrap:after {
+  border-bottom: 1px solid red;
+  content: '';
+  display: block;
+  position: absolute;
+  width: 50%;
+  left: 20%;
+  top: 50%;
+  transform: translate(-50%,-50%);
+} */
+/* -------our clint----------- */
+
+.demo{
+  margin-top: 60px;
+}
+.our_clint
+{text-align: center;
+  color: white;
+
+}
+.our_clint h1{
+  font-size: 60px;
+}
+/*---------- contact Us------------------*/
+.contactus{
+  text-align: center;
+  color: white;
+}
+.contactus h1{
+  font-size: 60px;
+}
+.accordian_1{
+  margin:60px 60px 60px 60px;
+}
+.accordion-body{
+  color: black;
+}
+/* -------------------------form--------------------- */
+*,:after,:before{box-sizing:border-box}
+.clearfix:after,.clearfix:before{content:'';display:table}
+.clearfix:after{clear:both;display:block}
+a{color:inherit;text-decoration:none}
+
+.login-wrap{
+  width:100% ;
+	min-height:670px;
+	position:relative;
+	background:url(https://c1.wallpaperflare.com/preview/287/573/247/vintage-old-camera-canon.jpg) cover no-repeat center;
+	/* box-shadow:0 12px 15px 0 rgba(0,0,0,.24),0 17px 50px 0 rgba(5, 5, 5, 0.19); */
+}
+.login-html{
+	width:100%;
+	height:100%;
+	position:absolute;
+	padding:90px 70px 50px 70px;
+	background:rgba(0, 0, 0, 0.367);
+}
+.login-html .sign-in-htm,
+.login-html .sign-up-htm{
+	top:0;
+	left:0;
+	right:0;
+	bottom:0;
+	position:absolute;
+	transform:rotateY(180deg);
+	backface-visibility:hidden;
+	transition:all .4s linear;
+}
+.login-html .sign-in,
+.login-html .sign-up,
+.login-form .group .check{
+	display:none;
+}
+.login-html .tab,
+.login-form .group .label,
+.login-form .group .button{
+	text-transform:uppercase;
+}
+.login-html .tab{
+	font-size:22px;
+	margin-right:15px;
+	padding-bottom:5px;
+	margin:0 15px 10px 0;
+	display:inline-block;
+	border-bottom:2px solid transparent;
+}
+.login-html .sign-in:checked + .tab,
+.login-html .sign-up:checked + .tab{
+	color:#fff;
+	border-color:#1161ee;
+}
+.login-form{
+	min-height:345px;
+	position:relative;
+	perspective:1000px;
+	transform-style:preserve-3d;
+}
+.login-form .group{
+	margin-bottom:15px;
+}
+.login-form .group .label,
+.login-form .group .input,
+.login-form .group .button{
+	width:100%;
+	color:#fff;
+	display:block;
+}
+.login-form .group .input,
+.login-form .group .button{
+	border:none;
+	padding:15px 20px;
+	border-radius:25px;
+	background:rgba(255, 213, 213, 0.1);
+}
+.login-form .group input[data-type="password"]{
+	text-security:circle;
+	-webkit-text-security:circle;
+}
+.login-form .group .label{
+	color:rgb(255, 255, 255);
+	font-size:12px;
+}
+.login-form .group .button{
+	background:#1161ee;
+}
+.login-form .group label .icon{
+	width:15px;
+	height:15px;
+	border-radius:2px;
+	position:relative;
+	display:inline-block;
+	background:rgba(255,255,255,.1);
+}
+.login-form .group label .icon:before,
+.login-form .group label .icon:after{
+	content:'';
+	width:10px;
+	height:2px;
+	background:#fff;
+	position:absolute;
+	transition:all .2s ease-in-out 0s;
+}
+.login-form .group label .icon:before{
+	left:3px;
+	width:5px;
+	bottom:6px;
+	transform:scale(0) rotate(0);
+}
+.login-form .group label .icon:after{
+	top:6px;
+	right:0;
+	transform:scale(0) rotate(0);
+}
+.login-form .group .check:checked + label{
+	color:#fff;
+}
+.login-form .group .check:checked + label .icon{
+	background:#1161ee;
+}
+.login-form .group .check:checked + label .icon:before{
+	transform:scale(1) rotate(45deg);
+}
+.login-form .group .check:checked + label .icon:after{
+	transform:scale(1) rotate(-45deg);
+}
+.login-html .sign-in:checked + .tab + .sign-up + .tab + .login-form .sign-in-htm{
+	transform:rotate(0);
+}
+.login-html .sign-up:checked + .tab + .login-form .sign-up-htm{
+	transform:rotate(0);
+}
+
+.hr{
+	height:2px;
+	margin:30px 0 30px 0;
+	background:rgba(255,255,255,.2);
+}
+.foot-lnk{
+	text-align:center;
+}
+/* ------------------------------owl carsoul------------------------------------- */
+.one{
+  text-align: center;
+}
+.one p{
+  padding-bottom: 20px;
+}
+
+/* -----------------futoor----------- */
+
+/* .bgimg{
+    background-image: url('/new_website/images/048A0106.jpg');
+    width: 100%;
+    padding-bottom: 680px;
+    background-size: cover;
+  } */
+  /* .navbar_1{
+    width: 100%;
+    background: black !important;
+    float: left;
+  }
+   .contact a{
+    color: white;
+    padding: 5px 15px 2px 15px ;
+    border-left:1px solid gray;
+    float: left;
+    text-decoration: none;
+    background-color:black;
+  }
+  .contact a:hover{
+    color: wheat;
+  }
+  .mediaimg a:hover{
+    color: wheat;
+  }
+  .mediaimg a{
+    border-right: 1px solid gray;
+    padding: 7px 30px 7px 30px;
+    float: right;
+    color: white;
+    background-color: black;
+  }
+  .navbar{
+    margin-top:30px ;
+    color: black;
+    width: 100%;
+  }
+  .bg-li_ght{
+    background-color:transparent;
+    position: fixed;
+    z-index: 789;
+  }
+  .navbar-light .navbar-nav .nav-link {
+    color: white;
+}
+.navbar-light .navbar-brand {
+  color: white;
+}
+
+.navbar-light .navbar-nav .nav-link.active, .navbar-light .navbar-nav .show>.nav-link {
+  color:white;
+}
+.navbar-light .navbar-nav .nav-link.disabled {
+  color:white;
+}
+
+  .carousel-item img{
+    height: 650px;
+    background-size: cover;
+  }
+  .carousel-caption h5{
+   color: red;
+   padding-bottom: 0px;
+   font-size: 100px;
+  }
+  .carousel-caption p{
+    padding-bottom: 100px;
+   bottom: 100px;
+   font-size: 40px;
+  }
+  /* .watch{
+    top: 34pc;
+    margin-left: 44pc;
+    padding: 10px 10px 10px 10px;
+  }
+  .watch a{
+    text-decoration: none;
+  }
+  .watch :hover{
+    background-color: black;
+    color: red;
+    padding: 10px 10px 10px 10px;
+     */
+  
+  /*.iamg{
+  }
+  .imge img{
+    width: 800px;
+    float: left;
+  }
+  .text_1{
+   width: 450px;
+   float: left;
+   padding: 50px 0px 0px 40px;
+  }
+.tick{
+  padding-right: 10px;
+  color: red;
+}
+.auto_view{
+  animation: auto_viewanimation;
+  animation-timeline: view();
+}
+@keyframes  auto_viewanimation{
+  from{
+    opacity: 0;
+    transform: translateY(200px) scale(0.3);
+  }to{
+    opacity: 1;
+    transform: translateY(0) scale(1.2);
+  }
+} */
